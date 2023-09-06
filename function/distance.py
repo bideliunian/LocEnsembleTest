@@ -2,11 +2,10 @@
 # coding: utf-8
 
 # In[1]:
-
-
 import numpy as np
 import scipy.linalg as la
-from wasserstein_1d import *
+from function.wasserstein_1d import *
+
 
 def pdist_distribution1d(X, metric='wasserstein2'):
     '''

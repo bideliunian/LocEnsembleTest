@@ -2,8 +2,6 @@
 # coding: utf-8
 
 # In[1]:
-
-
 import numpy as np
 from scipy.sparse.csgraph import minimum_spanning_tree
 from scipy.stats import rankdata
@@ -48,7 +46,7 @@ def get_graph(dist, k, graph_type='mstree'):
 
 def mstree(dist, k=1):
     '''
-    Para:
+    Parameters:
         dist: distance matrices, 2 dimensions
         k: the value of k in "k-MST" to construct the similarity graph,
         means to add n supplementary edges k-1 times.

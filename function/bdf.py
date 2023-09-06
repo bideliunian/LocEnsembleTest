@@ -2,7 +2,6 @@
 # coding: utf-8
 
 # In[7]:
-
 import numpy as np
 from scipy.stats import rankdata
 import distance

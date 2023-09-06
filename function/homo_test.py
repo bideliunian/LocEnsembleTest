@@ -2,18 +2,20 @@
 # coding: utf-8
 
 # In[2]:
-# Nonparametric Permutation Test using ball statistics, angle statistics, graph based method, and energy distance
+# Robust Testing using ball statistics, angle statistics, graph based method 
+# and energy distance
 # Author: Qi Zhang
 
 import numpy as np
+import random
 from itertools import combinations
 from math import factorial
-from distance import *
-from bdf import _ball_statistics_from_distance_matrices
-from adf import _angle_statistics_from_distance_matrices
-from energy_distance import _energy_distance_from_distance_matrices
-from gbt import *
-import random
+
+from function.distance import *
+from function.bdf import _ball_statistics_from_distance_matrices
+from function.adf import _angle_statistics_from_distance_matrices
+from function.energy_distance import _energy_distance_from_distance_matrices
+from function.gbt import *
 
 
 def permutation_test_homogeneity(
@@ -64,7 +66,7 @@ def permutation_test_homogeneity(
             'method must be approximate or exact',
         )
 
-    # calculating distance matrix
+    # computing distance matrix
     if space == 'distribution':
         dist_x = pdist_distribution1d(X=x, metric=metric)
         dist_y = pdist_distribution1d(X=y, metric=metric)

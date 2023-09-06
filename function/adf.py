@@ -2,8 +2,6 @@
 # coding: utf-8
 
 # In[2]:
-
-
 import numpy as np
 import distance
 
@@ -79,7 +77,7 @@ def _adf_helper(dist1, dist2):
                     num = 1.
                 elif num < -1.:
                     num = -1.
-                    
+
                 adf_2_ij = adf_2_ij + np.arccos(num) / n
 
             div += (adf_1_ij - adf_2_ij)**2

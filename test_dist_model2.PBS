@@ -13,7 +13,7 @@ echo "Job started on `hostname` at `date`"
 
 cd $PBS_O_WORKDIR
 
-python experiment_mp.py -mod 'model2' -n 50 -startidx $args
+python experiment_mp.py -mod "model2" -n 50 -nreps 5 -nperm 399 -startidx $args
 
 echo " "
 echo "Job Ended at `date`"

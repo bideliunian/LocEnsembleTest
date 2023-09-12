@@ -53,7 +53,7 @@ def permutation_test_homogeneity(
         The random seed for generating permutation samples if
         `method='approximate'`.
 
-    Output:
+    Returns:
         p-value under the null hypothesis
     """
 
@@ -86,7 +86,6 @@ def permutation_test_homogeneity(
 
     # angle to computing test statistics
     if isinstance(func, str):
-
         if func not in ("angle", "ball", "energy", 'graph'):
             raise AttributeError(
                 "Provide a custom angle"
@@ -102,8 +101,7 @@ def permutation_test_homogeneity(
 
         elif func == "energy":
             def get_stat(dist_x, dist_y, dist_xy):
-                return _energy_distance_from_distance_matrices(dist_x, dist_y, dist_xy,
-                                                            estimation_stat='U_STATISTIC')
+                return _energy_distance_from_distance_matrices(dist_x, dist_y, dist_xy, estimation_stat='U_STATISTIC')
 
         elif func == 'graph':
             simi_graph = mstree(dist_pooled, k=5)

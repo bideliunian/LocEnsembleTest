@@ -21,7 +21,7 @@ def get_graph(dist, k, graph_type='mstree'):
     "mstree": minimal spanning tree.
     "nnlink": nearest neighbor link method.
 
-    Output:
+    Returns:
         An edge matrix representing a similarity graph on the distinct values
         with the number of edges in the similarity graph being the number of
         rows and 2 columns. Each row records the subject indices of the two

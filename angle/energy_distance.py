@@ -5,7 +5,7 @@ def _energy_distance_from_distance_matrices(
     distance_xx,
     distance_yy,
     distance_xy,
-        estimation_stat='U_STATISTIC'):
+    estimation_stat='U_STATISTIC'):
     """
     Compute energy distance with precalculated distance matrices.
 

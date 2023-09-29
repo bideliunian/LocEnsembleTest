@@ -2,8 +2,9 @@ import numpy as np
 from scipy.linalg import expm
 from scipy.stats import multivariate_t
 
+
 def generate_data_distribution_1d(n, m, model, delta=0):
-    '''
+    """
     angle generating distributional data
     x~N(mu, sigma)
     mu~tN(delta, r*0.5)
@@ -14,7 +15,7 @@ def generate_data_distribution_1d(n, m, model, delta=0):
 
     Return:
         n * m matrix
-    '''
+    """
     if model == 'model1':
         mu = np.random.standard_cauchy(n) + delta
         sigma = 1

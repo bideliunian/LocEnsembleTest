@@ -6,6 +6,7 @@ import numpy as np
 from angle.distance import *
 from angle.local_angle_stats import *
 
+
 def permutation_test_homogeneity_local_ensemble(
         x,
         y,
@@ -38,7 +39,7 @@ def permutation_test_homogeneity_local_ensemble(
         The random seed for generating permutation samples if
         `method='approximate'`.
 
-    Output:
+    Returns:
         p-value under the null hypothesis
     """
 
@@ -77,7 +78,7 @@ def permutation_test_homogeneity_local_ensemble(
 
     dist_xyz = dist_euclidean(data_pooled, z)
     dist_xz = dist_xyz[0:m, :]
-    dist_yz = dist_xyz[m:(m+n), :]
+    dist_yz = dist_xyz[m:(m + n), :]
     # angle_dist_joint = local_angle_pdist(dist_xyz, dist_xyxy)
     reference_stat = angle_statistics_from_distance_matrices(dist_xx, dist_yy, dist_xy, dist_xz, dist_yz)
 
